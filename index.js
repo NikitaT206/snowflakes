@@ -7,13 +7,11 @@ function createSnowflake() {
 
 const width = window.innerWidth
 
-const arrayOfSnowflakes = [...new Array(Math.floor(width / 5)).fill(createSnowflake())]
+const arrayOfSnowflakes = [...new Array(Math.floor(width / 10)).fill(createSnowflake())]
 
 arrayOfSnowflakes.forEach((item) => {
   item.style.top = `${Math.floor(Math.random() * 100)}vh`
   item.style.left = `${Math.floor(Math.random() * 100)}vw`
-  item.style.width = `${Math.floor(Math.random() * 10 + 6)}px`
-  item.style.heigth = `${Math.floor(Math.random() * 10 + 6)}px`
   item.style.borderRadius = `
     ${Math.floor(Math.random() * 50 + 35)}% 
     ${Math.floor(Math.random() * 50 + 35)}% 
